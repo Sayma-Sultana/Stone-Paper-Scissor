@@ -10,30 +10,30 @@
 
 <AnchorPane id="AnchorPane" prefHeight="367.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stone_paper_scissors_game.FXMLDocumentController">
    <children>
-      <ImageView fx:id="img" fitHeight="376.0" fitWidth="558.0" layoutX="6.0" pickOnBounds="true">
+      <ImageView fx:id="img" fitHeight="382.0" fitWidth="558.0" pickOnBounds="true">
          <image>
-            <Image url="@image/images.jpg" />
+            <Image url="@image/download%20(5).jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="285.0" layoutY="129.0" promptText="Enter Your Name" />
-      <Label layoutX="176.0" layoutY="129.0" prefHeight="25.0" prefWidth="65.0" text="Name : " textFill="#141414">
+      <TextField layoutX="275.0" layoutY="225.0" promptText="Enter Your Name" />
+      <Label layoutX="166.0" layoutY="225.0" prefHeight="25.0" prefWidth="65.0" text="Name : " textFill="#141414">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <TextField layoutX="285.0" layoutY="169.0" promptText="Enter Your Email" />
-      <Label layoutX="176.0" layoutY="169.0" prefHeight="25.0" prefWidth="65.0" text="Email : " textFill="#1e1d1d">
+      <TextField layoutX="275.0" layoutY="256.0" promptText="Enter Your Email" />
+      <Label layoutX="166.0" layoutY="256.0" prefHeight="25.0" prefWidth="65.0" text="Email : " textFill="#1e1d1d">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <TextField layoutX="285.0" layoutY="215.0" promptText="Enter Your Password" />
-      <Label layoutX="176.0" layoutY="215.0" prefHeight="25.0" prefWidth="65.0" text="Password : ">
+      <TextField layoutX="275.0" layoutY="290.0" promptText="Enter Your Password" />
+      <Label layoutX="166.0" layoutY="290.0" prefHeight="25.0" prefWidth="65.0" text="Password : ">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Button layoutX="236.0" layoutY="281.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Sign in" />
-      <Label layoutX="220.0" layoutY="41.0" prefHeight="71.0" prefWidth="217.0" text="LOGIN PAGE" textFill="#cc1219">
+      <Button layoutX="221.0" layoutY="333.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Log in" />
+      <Label layoutX="199.0" prefHeight="71.0" prefWidth="217.0" text="&lt;Login Page&gt;" textFill="#cc1219">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="22.0" />
          </font>
       </Label>
    </children>
