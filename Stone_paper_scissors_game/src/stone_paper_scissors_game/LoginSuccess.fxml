@@ -19,7 +19,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="232.0" layoutY="284.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="113.0" text="Play ">
+      <Button fx:id="playbtn" layoutX="232.0" layoutY="284.0" mnemonicParsing="false" onAction="#playbtnmethod" prefHeight="41.0" prefWidth="113.0" text="Play ">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
