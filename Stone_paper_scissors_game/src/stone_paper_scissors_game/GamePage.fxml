@@ -9,31 +9,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stone_paper_scissors_game.GamePageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <top>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.5);" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="68.0" prefWidth="112.0" text="Player" textFill="#ee0101">
+            <Label prefHeight="68.0" prefWidth="112.0" text="Player" textFill="#030000">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="251.0" layoutY="26.0" prefHeight="68.0" prefWidth="66.0" text="0" textFill="#ee0101">
+            <Label fx:id="playerScore" layoutX="251.0" layoutY="26.0" prefHeight="68.0" prefWidth="66.0" text="0" textFill="#140202">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="336.0" layoutY="26.0" prefHeight="68.0" prefWidth="66.0" text="-" textFill="#ee0101">
+            <Label layoutX="336.0" layoutY="26.0" prefHeight="68.0" prefWidth="66.0" text="-" textFill="#0d0101">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="369.0" layoutY="26.0" prefHeight="68.0" prefWidth="61.0" text="0" textFill="#ee0101">
+            <Label fx:id="botScore" layoutX="369.0" layoutY="26.0" prefHeight="68.0" prefWidth="61.0" text="0" textFill="#110303">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="152.0" layoutY="26.0" prefHeight="68.0" prefWidth="118.0" text="BOT" textFill="#ed0202">
+            <Label layoutX="152.0" layoutY="26.0" prefHeight="68.0" prefWidth="118.0" text="BOT" textFill="#110202">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -46,7 +46,7 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="85.0" style="-fx-background-color: rgba(0,0,0,0);">
+                  <Button fx:id="stoneBtn" mnemonicParsing="false" onAction="#playerTurn" prefHeight="80.0" prefWidth="85.0" style="-fx-background-color: rgba(0,0,0,0);">
                      <graphic>
                         <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true">
                            <image>
@@ -55,16 +55,16 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label text="Stone">
+                  <Label text="Stone" textFill="#1a1622">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
                </children>
             </VBox>
-            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+            <VBox alignment="CENTER" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="85.0" style="-fx-background-color: rgba(0,0,0,0);">
+                  <Button fx:id="paperBtn" mnemonicParsing="false" onAction="#playerTurn" prefHeight="80.0" prefWidth="85.0" style="-fx-background-color: rgba(0,0,0,0);">
                      <graphic>
                         <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true">
                            <image>
@@ -73,16 +73,16 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label text="Paper">
+                  <Label text="Paper" textFill="#1a1622">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
                </children>
             </VBox>
-            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+            <VBox alignment="CENTER" layoutX="410.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="85.0" style="-fx-background-color: rgba(0,0,0,0);">
+                  <Button fx:id="scissorBtn" mnemonicParsing="false" onAction="#playerTurn" prefHeight="80.0" prefWidth="85.0" style="-fx-background-color: rgba(0,0,0,0);">
                      <graphic>
                         <ImageView fitHeight="79.0" fitWidth="79.0" pickOnBounds="true">
                            <image>
@@ -91,7 +91,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label text="Scissor">
+                  <Label text="Scissor" textFill="#1a1622">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -103,13 +103,13 @@
    <center>
       <HBox alignment="CENTER" prefHeight="214.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="133.0" fitWidth="138.0" pickOnBounds="true" />
-            <Label alignment="CENTER" prefHeight="42.0" prefWidth="118.0" text="Result" textFill="#100386">
+            <ImageView fx:id="player" fitHeight="133.0" fitWidth="138.0" pickOnBounds="true" />
+            <Label fx:id="result" alignment="CENTER" prefHeight="42.0" prefWidth="118.0" textFill="#100386">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <ImageView fitHeight="133.0" fitWidth="138.0" layoutX="241.0" layoutY="44.0" pickOnBounds="true" />
+            <ImageView fx:id="bot" fitHeight="133.0" fitWidth="138.0" layoutX="241.0" layoutY="44.0" pickOnBounds="true" />
          </children>
       </HBox>
    </center>
