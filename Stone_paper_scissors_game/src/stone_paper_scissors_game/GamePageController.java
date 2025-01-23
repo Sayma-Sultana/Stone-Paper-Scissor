@@ -4,6 +4,7 @@
  */
 package stone_paper_scissors_game;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -47,18 +48,23 @@ public class GamePageController implements Initializable {
     @FXML
     private void playerTurn(ActionEvent event){
         
+        
+        String rock = new File("").getAbsolutePath() + "\\src\\stone_paper_scissors_game\\image\\Stone.jpg";
+String paper =new File("").getAbsolutePath() + "\\src\\stone_paper_scissors_game\\image\\Paper.jpg";
+String scissor = new File("").getAbsolutePath() + "\\src\\stone_paper_scissors_game\\image\\Scissor.jpg";
+        
         String playerChoice = null;
         switch(((Button)event.getSource()).getId()) {
             case "paperBtn":
-                image = new Image("/image/Paper.jpg");
+                image = new Image(paper);
                 playerChoice = PAPER;
                 break;
              case "stoneBtn":
-                image = new Image("/image/Stone.jpg");
+                image = new Image(rock);
                 playerChoice = STONE;
                 break;   
              case "scissorBtn":
-                image = new Image("/image/Scissor.jpg");
+                image = new Image(scissor);
                 playerChoice = SCISSORS;
                 break;   
         }
@@ -69,19 +75,23 @@ public class GamePageController implements Initializable {
             
     
     private String botTurn(){
+        
+        String rock = new File("").getAbsolutePath() + "\\src\\stone_paper_scissors_game\\image\\Stone.jpg";
+String paper =new File("").getAbsolutePath() + "\\src\\stone_paper_scissors_game\\image\\Paper.jpg";
+String scissor = new File("").getAbsolutePath() + "\\src\\stone_paper_scissors_game\\image\\Scissor.jpg";
         String botChoice = null;
         int index = (int)(Math.random()*3);
         switch(index){
             case 0:
-                image = new Image("/image/Stone.jpg");
+                image = new Image(rock);
                 botChoice = STONE;
                 break;
             case 1:
-                image = new Image("/image/Paper.jpg");
+                image = new Image(paper);
                 botChoice = PAPER;
                 break;
             case 2:
-                image = new Image("/image/Scissor.jpg");
+                image = new Image(scissor);
                 botChoice = SCISSORS;
                 break;
                 
