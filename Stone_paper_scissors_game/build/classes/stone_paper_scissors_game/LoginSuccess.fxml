@@ -14,12 +14,22 @@
             <Image url="@image/download%20(5).jpg" />
          </image>
       </ImageView>
-      <Label layoutX="197.0" layoutY="214.0" prefHeight="58.0" prefWidth="214.0" text="Login Successful!!" textFill="#f20202">
+      <Label layoutX="213.0" prefHeight="58.0" prefWidth="214.0" text="Login Successful!!" textFill="#f20202">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="playbtn" layoutX="232.0" layoutY="284.0" mnemonicParsing="false" onAction="#playbtnmethod" prefHeight="41.0" prefWidth="113.0" text="Play ">
+      <Button fx:id="playbtn" layoutX="229.0" layoutY="217.0" mnemonicParsing="false" onAction="#playbtnmethod" prefHeight="41.0" prefWidth="113.0" text="Play ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="229.0" layoutY="266.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="113.0" text="Scores">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="229.0" layoutY="317.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="113.0" text="Quit">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

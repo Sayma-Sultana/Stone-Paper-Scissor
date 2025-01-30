@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -9,10 +10,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stone_paper_scissors_game.GamePageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="637.0" style="-fx-background-color: #F8DE7E;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stone_paper_scissors_game.GamePageController">
    <top>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.5);" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="630.0" style="-fx-background-color: rgba(0,0,0,0.5);" BorderPane.alignment="CENTER">
          <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" text="Back">
+               <HBox.margin>
+                  <Insets bottom="80.0" right="100.0" />
+               </HBox.margin>
+            </Button>
             <Label prefHeight="68.0" prefWidth="112.0" text="Player" textFill="#030000">
                <font>
                   <Font name="System Bold" size="30.0" />
@@ -38,6 +44,11 @@
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Exit">
+               <HBox.margin>
+                  <Insets bottom="80.0" left="-1.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
    </top>

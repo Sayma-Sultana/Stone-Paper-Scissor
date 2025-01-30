@@ -4,11 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/HP/Documents/GitHub/Stone-Paper-Scissor/Stone_paper_scissors_game/src/stone_paper_scissors_game/Stone_paper_scissors_game.java</file>
+            <file>file:/C:/Users/HP/Documents/GitHub/Stone-Paper-Scissor/Stone_paper_scissors_game/src/stone_paper_scissors_game/Database.java</file>
+            <file>file:/C:/Users/HP/Documents/GitHub/Stone-Paper-Scissor/Stone_paper_scissors_game/src/stone_paper_scissors_game/Users.java</file>
+            <file>file:/C:/Users/HP/Documents/GitHub/Stone-Paper-Scissor/Stone_paper_scissors_game/src/stone_paper_scissors_game/Scores.fxml</file>
             <file>file:/C:/Users/HP/Documents/GitHub/Stone-Paper-Scissor/Stone_paper_scissors_game/src/sample/Controller.java</file>
             <file>file:/C:/Users/HP/Documents/GitHub/Stone-Paper-Scissor/Stone_paper_scissors_game/src/stone_paper_scissors_game/LoginSuccess.fxml</file>
             <file>file:/C:/Users/HP/Documents/GitHub/Stone-Paper-Scissor/Stone_paper_scissors_game/src/stone_paper_scissors_game/LoginSuccessController.java</file>
             <file>file:/C:/Users/HP/Documents/GitHub/Stone-Paper-Scissor/Stone_paper_scissors_game/src/stone_paper_scissors_game/GamePage.fxml</file>
             <file>file:/C:/Users/HP/Documents/GitHub/Stone-Paper-Scissor/Stone_paper_scissors_game/src/stone_paper_scissors_game/GamePageController.java</file>
+            <file>file:/C:/Users/HP/Documents/GitHub/Stone-Paper-Scissor/Stone_paper_scissors_game/src/stone_paper_scissors_game/ScoresController.java</file>
         </group>
     </open-files>
 </project-private>
