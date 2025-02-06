@@ -25,7 +25,34 @@ public class Database {
             return null;
         }
     }
-    public ObservableList<Users> getStudents() {
+    public ObservableList<LoginUser> getUsers() {
+        ObservableList<LoginUser> studentList = FXCollections.observableArrayList();
+        Connection conn = getConnnection();
+        String query = "SELECT * FROM login";
+        
+        Statement st;
+        ResultSet rs;
+        try {
+            st = conn.createStatement();
+            rs = st.executeQuery(query);
+            
+            while (rs.next()) {
+                LoginUser u = new LoginUser();
+                           u.setName(rs.getString("name"));
+            u.setEmail(rs.getString("email"));
+            u.setPassword(rs.getString("password"));
+            u.setMax(rs.getInt("max"));
+            u.setRank(rs.getInt("rank"));
+            u.setDate(rs.getString("date"));
+                studentList.add(u);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return studentList;
+    }
+    
+        public ObservableList<Users> getStudents() {
         ObservableList<Users> studentList = FXCollections.observableArrayList();
         Connection conn = getConnnection();
         String query = "SELECT * FROM score";
