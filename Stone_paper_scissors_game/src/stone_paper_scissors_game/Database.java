@@ -1,7 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
+
 package stone_paper_scissors_game;
 
 import javafx.collections.ObservableList;
@@ -28,7 +26,9 @@ public class Database {
     public ObservableList<LoginUser> getUsers() {
         ObservableList<LoginUser> studentList = FXCollections.observableArrayList();
         Connection conn = getConnnection();
-        String query = "SELECT * FROM login";
+//        String query = "SELECT * FROM login ORDER BY max DESC";
+        String query = "SELECT *, (SELECT COUNT(*) FROM login AS l2 WHERE l2.max > l1.max) AS rows_after " +
+                       "FROM login AS l1 ORDER BY max DESC";
         
         Statement st;
         ResultSet rs;
@@ -42,7 +42,9 @@ public class Database {
             u.setEmail(rs.getString("email"));
             u.setPassword(rs.getString("password"));
             u.setMax(rs.getInt("max"));
-            u.setRank(rs.getInt("rank"));
+            
+            u.setRank(rs.getInt("rows_after")+1);
+            
             u.setDate(rs.getString("date"));
                 studentList.add(u);
             }
